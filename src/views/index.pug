@@ -1,0 +1,43 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Pagina-Principal
+        link(rel="stylesheet", href="../public/style.css")
+    body 
+        header 
+            h1 Tienda
+        main 
+            section.form-product 
+                form(action="/product", method="post")
+                    div.form-group 
+                        label(for="name") Name:
+                        input(type="text", name="name", id="name")  
+                    div.form-group 
+                        label(for="price") Price:
+                        input(type="text", name="price", id="price")
+                    div.form-group
+                        label(for="currency") Currency: 
+                        input(type="text", name="currency", id="currency")
+                    input(type="submit", value="Agregar")
+
+            section.product-information  
+                table 
+                    tr 
+                        th Id 
+                        th Name 
+                        th Price 
+                        th Currency 
+                        th Actions
+                    each product in allProducts 
+                        tr 
+                            td= product.id 
+                            td= product.name
+                            td= product.price 
+                            td= product.currency   
+                            td 
+                                button.edit Edit 
+                                button.delete(href) Delete
+
+                
