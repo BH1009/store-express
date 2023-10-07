@@ -1,5 +1,9 @@
 const productRouter = require('express').Router()
-const {createProduct, updateProduct, deleteProduct} = require('../controllers/product.controller')
+const {allProducts, showProduct, createProduct, updateProduct, deleteProduct} = require('../controllers/product.controller')
+
+productRouter.get('/product', allProducts)
+
+productRouter.get('/product/:id', showProduct)
 
 productRouter.post('/product', createProduct)
 
