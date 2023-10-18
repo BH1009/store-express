@@ -1,5 +1,7 @@
 const deleteButton = document.querySelector('button.delete')
 const editButton = document.querySelector('button.edit')
+const form = document.querySelector('form')
+const inputName = document.getElementById('name')
 
 deleteButton.addEventListener("click", async (e) => {
     const id = deleteButton.dataset.id
@@ -13,6 +15,3 @@ deleteButton.addEventListener("click", async (e) => {
     }
 })
 
-editButton.addEventListener('click', () => {
-    console.log("clicked button edit")
-})

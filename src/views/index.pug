@@ -3,11 +3,11 @@ html(lang="en")
     head
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        title Pagina-Principal
+        title Store
         link(rel="stylesheet", href="../public/style.css")
     body 
         header 
-            h1 Tienda
+            h1 Store
         main 
             section.form-product 
                 form(action="/product", method="post")
@@ -20,7 +20,7 @@ html(lang="en")
                     div.form-group
                         label(for="currency") Currency: 
                         input(type="text", name="currency", id="currency")
-                    input(type="submit", value="Agregar")
+                    input(type="submit", value="Add")
 
             section.product-information  
                 table 
@@ -37,7 +37,8 @@ html(lang="en")
                             td= product.price 
                             td= product.currency   
                             td 
-                                button.edit Edit 
+                                a.edit(href=`/editproduct/${product.id}` ) Edit 
                                 button.delete(data-id=product.id) Delete
+
         script(src="/public/main.js") 
                 
