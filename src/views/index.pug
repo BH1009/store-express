@@ -1,10 +1,6 @@
 doctype html
 html(lang="en")
-    head
-        meta(charset="UTF-8")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        title Store
-        link(rel="stylesheet", href="../public/style.css")
+    include templates/head.pug 
     body 
         header 
             h1 Store
@@ -40,5 +36,5 @@ html(lang="en")
                                 a.edit(href=`/editproduct/${product.id}` ) Edit 
                                 button.delete(data-id=product.id) Delete
 
-        script(src="/public/main.js") 
+        script(src="/public/index.js") 
                 
