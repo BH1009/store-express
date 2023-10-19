@@ -61,12 +61,12 @@ background-color: #f44336;
 color: white;
 }
 
-button:hover, a:hover {
+/* button:hover, a:hover {
 background-color: #ddd;
-}
+} */
 
 a.edit:hover {
-background-color: #45a049;
+background-color: #b7ba29;
 }
 
 button.delete:hover {
@@ -140,7 +140,7 @@ background-color: #45a049;
 }
 
 /* Estilos para dispositivos móviles */
-@media (max-width: 480px) {
+@media (max-width: 400px) {
   /* Ajustes específicos para pantallas más pequeñas (por ejemplo, smartphones) */
   h1 {
       font-size: 36px; /* Reduce el tamaño del encabezado para pantallas más pequeñas */
