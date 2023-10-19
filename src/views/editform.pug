@@ -1,19 +1,26 @@
 doctype html
 html(lang="en")
-    include templates/head.pug
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Store
+        link(rel="stylesheet", href="../public/style.css")
     body
-        section.edit-product 
-            form(id="edit-form")
-                input(type="hidden", name="id" value=product.id)
-                div.form-group 
-                    label(for="name") Name:
-                    input(type="text", name="name", id="name" value=product.name)  
-                div.form-group 
-                    label(for="price") Price:
-                    input(type="text", name="price", id="price" value=product.price)
-                div.form-group
-                    label(for="currency") Currency: 
-                    input(type="text", name="currency", id="currency" value=product.currency)
-                input.save(type="submit", value="Save")
-                a(href="/") Back to main
+        header 
+            h1 Edit Product 
+        main
+            section.form-product 
+                form(id="edit-form")
+                    input(type="hidden", name="id" value=product.id)
+                    div.form-group 
+                        label(for="name") Name:
+                        input(type="text", name="name", id="name" value=product.name)  
+                    div.form-group 
+                        label(for="price") Price:
+                        input(type="text", name="price", id="price" value=product.price)
+                    div.form-group
+                        label(for="currency") Currency: 
+                        input(type="text", name="currency", id="currency" value=product.currency)
+                    input.save(type="submit", value="Save")
+                    a(href="/") Back to main
     script(src="/public/editform.js") 

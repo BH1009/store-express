@@ -6,10 +6,6 @@ exports.showProducts = async (req, res, next) => {
   next()
 }
 
-exports.createProduct = (req, res ) => {
-  res.render('createform')
-}
-
 exports.editProduct = async (req, res) => {
   const product = await Product.findOne({_id: req.params.id})
   res.render('editform', {product})
